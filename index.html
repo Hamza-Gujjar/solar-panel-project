@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profexo Solar Systems | Clean Solar Energy Toronto</title>
+    <meta
+      name="description"
+      content="Reliable, affordable solar solutions for homes and businesses in Toronto."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      :root {
+        --navy: #0a1e3d;
+        --navy-light: #1a3157;
+        --navy-dark: #06142a;
+        --solar-gold: #f0b429;
+        --solar-gold-light: #f7d070;
+        --solar-gold-dark: #c48a1a;
+        --bg-light: #f5f7fa;
+        --text-dark: #0e1f3e;
+        --text-muted: #6b7a90;
+        --border-color: #dfe4ea;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: var(--text-dark);
+        background: var(--bg-light);
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .navbar-custom {
+        padding: 1.2rem 0;
+        transition: all 0.3s;
+        background: transparent;
+      }
+      .navbar-custom.scrolled {
+        background: rgba(6, 20, 42, 0.95);
+        backdrop-filter: blur(12px);
+        padding: 0.7rem 0;
+        box-shadow: 0 4px 20px rgba(10, 30, 61, 0.25);
+      }
+      .navbar-brand-text {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #fff;
+        letter-spacing: -0.5px;
+      }
+      .navbar-brand-text span {
+        color: var(--solar-gold);
+      }
+      .navbar-custom .nav-link {
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+        margin: 0 0.3rem;
+      }
+      .navbar-custom .nav-link:hover {
+        color: var(--solar-gold);
+      }
+      .btn-solar {
+        background: linear-gradient(
+          135deg,
+          var(--solar-gold),
+          var(--solar-gold-dark)
+        );
+        color: var(--navy-dark);
+        font-weight: 700;
+        border: none;
+        padding: 0.65rem 1.8rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s;
+        box-shadow: 0 4px 20px rgba(240, 180, 41, 0.35);
+      }
+      .btn-solar:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(240, 180, 41, 0.45);
+        color: var(--navy-dark);
+      }
+      .btn-hero-outline {
+        background: 0 0;
+        color: #fff;
+        font-weight: 600;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 0.65rem 1.8rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s;
+        text-decoration: none;
+      }
+      .btn-hero-outline:hover {
+        border-color: var(--solar-gold);
+        color: var(--solar-gold);
+      }
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      .hero-section {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+        overflow: hidden;
+      }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80")
+          center/cover no-repeat;
+        opacity: 0.2;
+      }
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(6, 20, 42, 0.6),
+          rgba(10, 30, 61, 0.9)
+        );
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-badge {
+        display: inline-block;
+        background: rgba(240, 180, 41, 0.15);
+        border: 1px solid rgba(240, 180, 41, 0.3);
+        border-radius: 50px;
+        padding: 0.4rem 1.2rem;
+        color: var(--solar-gold);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+      .hero-title .highlight {
+        background: linear-gradient(
+          135deg,
+          var(--solar-gold),
+          var(--solar-gold-light)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-subtitle {
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.6);
+        max-width: 540px;
+        margin-bottom: 2rem;
+        line-height: 1.7;
+      }
+      .hero-stat h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--solar-gold);
+      }
+      .hero-stat p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+      }
+
+      .section-label {
+        color: var(--solar-gold);
+        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+      }
+
+      .services-section {
+        padding: 6rem 0;
+        background: #fff;
+      }
+      .service-card {
+        background: var(--bg-light);
+        border: 1px solid var(--border-color);
+        border-radius: 1rem;
+        padding: 2.5rem 2rem;
+        transition: all 0.3s;
+        height: 100%;
+      }
+      .service-card:hover {
+        border-color: var(--solar-gold);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(10, 30, 61, 0.08);
+      }
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 0.75rem;
+        background: linear-gradient(135deg, var(--navy), var(--navy-light));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        color: var(--solar-gold);
+        font-size: 1.5rem;
+      }
+      .service-card h4 {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+      .service-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      .why-section {
+        padding: 6rem 0;
+        background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      }
+      .why-section .section-title {
+        color: #fff;
+      }
+      .why-section .section-subtitle {
+        color: rgba(255, 255, 255, 0.6);
+        max-width: 600px;
+        margin: 1rem auto 0;
+        font-size: 1.05rem;
+      }
+      .why-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(240, 180, 41, 0.1);
+        border: 1px solid rgba(240, 180, 41, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem;
+        color: var(--solar-gold);
+        font-size: 1.5rem;
+        transition: background 0.3s;
+      }
+      .why-card:hover .why-icon {
+        background: rgba(240, 180, 41, 0.2);
+      }
+      .why-card h5 {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .why-card p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.9rem;
+      }
+
+      .process-section {
+        padding: 6rem 0;
+        background: var(--bg-light);
+      }
+      .process-circle {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid rgba(240, 180, 41, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        color: var(--solar-gold);
+        position: relative;
+        z-index: 2;
+      }
+      .step-label {
+        color: var(--solar-gold);
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+      .process-step h5 {
+        font-weight: 600;
+        margin: 0.5rem 0;
+      }
+      .process-step p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+      .process-step {
+        text-align: center;
+        position: relative;
+      }
+      .process-line {
+        position: absolute;
+        top: 48px;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background: var(--border-color);
+        z-index: 1;
+      }
+
+      .projects-section {
+        padding: 6rem 0;
+        background: #fff;
+      }
+      .project-card {
+        position: relative;
+        border-radius: 1rem;
+        overflow: hidden;
+        cursor: pointer;
+        aspect-ratio: 4/3;
+      }
+      .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .project-card:hover img {
+        transform: scale(1.1);
+      }
+      .project-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(6, 20, 42, 0);
+        display: flex;
+        align-items: flex-end;
+        transition: background 0.3s;
+      }
+      .project-card:hover .project-overlay {
+        background: rgba(6, 20, 42, 0.7);
+      }
+      .project-info {
+        padding: 1.5rem;
+        transform: translateY(100%);
+        transition: transform 0.3s;
+      }
+      .project-card:hover .project-info {
+        transform: translateY(0);
+      }
+      .project-info h5 {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .project-info p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .testimonials-section {
+        padding: 6rem 0;
+        background: var(--bg-light);
+      }
+      .testimonial-card {
+        background: #fff;
+        border: 1px solid var(--border-color);
+        border-radius: 1rem;
+        padding: 2rem;
+        height: 100%;
+        transition: border-color 0.3s;
+      }
+      .testimonial-card:hover {
+        border-color: rgba(240, 180, 41, 0.3);
+      }
+      .testimonial-stars {
+        color: var(--solar-gold);
+        margin-bottom: 1rem;
+      }
+      .testimonial-card .quote {
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+      }
+      .testimonial-card .author {
+        font-weight: 600;
+      }
+      .testimonial-card .role {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+
+      .cta-section {
+        padding: 6rem 0;
+        background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1920&q=80")
+          center/cover no-repeat;
+        opacity: 0.1;
+      }
+      .cta-section .content {
+        position: relative;
+        z-index: 2;
+      }
+      .cta-section h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+      .cta-section p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 1rem auto 2rem;
+      }
+
+      .contact-section {
+        padding: 6rem 0;
+        background: #fff;
+      }
+      .contact-info-card {
+        background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+        border-radius: 1rem;
+        padding: 3rem;
+        height: 100%;
+        color: #fff;
+      }
+      .contact-info-card h3 {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .contact-info-card .subtitle {
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 2rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .contact-item-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        border-radius: 0.75rem;
+        background: rgba(240, 180, 41, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--solar-gold);
+      }
+      .contact-item h6 {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .contact-item p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      .contact-form-card {
+        background: var(--bg-light);
+        border: 1px solid var(--border-color);
+        border-radius: 1rem;
+        padding: 2.5rem;
+        height: 100%;
+      }
+      .contact-form-card .form-control {
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        transition: border-color 0.2s;
+      }
+      .contact-form-card .form-control:focus {
+        border-color: var(--solar-gold);
+        box-shadow: 0 0 0 3px rgba(240, 180, 41, 0.15);
+      }
+
+      .footer {
+        background: var(--navy-dark);
+        padding: 4rem 0 0;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .footer h5 {
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+      }
+      .footer a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer a:hover {
+        color: var(--solar-gold);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem 0;
+        margin-top: 3rem;
+      }
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.6);
+        transition: all 0.3s;
+        margin-right: 0.5rem;
+      }
+      .social-link:hover {
+        background: var(--solar-gold);
+        border-color: var(--solar-gold);
+        color: var(--navy-dark);
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.2rem;
+        }
+        .section-title {
+          font-size: 1.8rem;
+        }
+        .process-line {
+          display: none;
+        }
+        .hero-stat h3 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#"
+          ><i class="fas fa-sun fa-lg" style="color: var(--solar-gold)"></i
+          ><span class="navbar-brand-text">PROFEXO <span>SOLAR</span></span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#why-us">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#process">Process</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-solar">Get a Quote</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section" id="hero">
+      <div class="container hero-content">
+        <div class="row">
+          <div class="col-lg-7" data-aos="fade-up">
+            <div class="hero-badge">
+              <i class="fas fa-bolt me-2"></i>Clean Energy Solutions
+            </div>
+            <h1 class="hero-title">
+              Power Your Future with
+              <span class="highlight">Clean Solar Energy</span>
+            </h1>
+            <p class="hero-subtitle">
+              Reliable, affordable, and sustainable solar solutions for homes
+              and businesses across Toronto and the GTA.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="#contact" class="btn btn-solar btn-lg">Get a Quote</a>
+              <a href="#services" class="btn btn-hero-outline btn-lg"
+                >Explore Solutions</a
+              >
+            </div>
+            <div class="d-flex gap-5 mt-5">
+              <div class="hero-stat" data-aos="fade-up" data-aos-delay="200">
+                <h3>500+</h3>
+                <p>Projects Completed</p>
+              </div>
+              <div class="hero-stat" data-aos="fade-up" data-aos-delay="300">
+                <h3>98%</h3>
+                <p>Customer Satisfaction</p>
+              </div>
+              <div class="hero-stat" data-aos="fade-up" data-aos-delay="400">
+                <h3>25yr</h3>
+                <p>Warranty Coverage</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">What We Offer</span>
+          <h2 class="section-title">Our Solar Services</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-home"></i></div>
+              <h4>Residential Solar</h4>
+              <p>
+                Custom solar solutions designed for your home. Reduce energy
+                bills and increase property value.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-building"></i></div>
+              <h4>Commercial Solar</h4>
+              <p>
+                Scalable systems for businesses of all sizes. Lower operating
+                costs and meet sustainability goals.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-tools"></i></div>
+              <h4>Installation & Maintenance</h4>
+              <p>
+                Professional installation and ongoing maintenance by certified
+                solar engineers.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-battery-full"></i>
+              </div>
+              <h4>Battery Storage</h4>
+              <p>
+                Store excess solar energy for use during peak hours or power
+                outages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section" id="why-us">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">Why Profexo</span>
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">
+            We deliver premium solar solutions backed by expertise, innovation,
+            and commitment.
+          </p>
+        </div>
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3" data-aos="fade-up">
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-bolt"></i></div>
+              <h5>High Efficiency</h5>
+              <p>Industry-leading panels with up to 22.8% efficiency.</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-dollar-sign"></i></div>
+              <h5>Affordable Pricing</h5>
+              <p>Competitive pricing with flexible financing options.</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-users"></i></div>
+              <h5>Expert Team</h5>
+              <p>Certified professionals with 10+ years experience.</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="why-card">
+              <div class="why-icon"><i class="fas fa-headset"></i></div>
+              <h5>24/7 Support</h5>
+              <p>Round-the-clock support and real-time monitoring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="process">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title">Our Simple Process</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-lg-3" data-aos="fade-up">
+            <div class="process-step">
+              <div class="process-circle"><i class="fas fa-comments"></i></div>
+              <span class="step-label">Step 01</span>
+              <h5>Consultation</h5>
+              <p>Free assessment of your energy needs and site evaluation.</p>
+              <div class="process-line d-none d-lg-block"></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+            <div class="process-step">
+              <div class="process-circle"><i class="fas fa-palette"></i></div>
+              <span class="step-label">Step 02</span>
+              <h5>Design</h5>
+              <p>Custom system design optimized for maximum energy output.</p>
+              <div class="process-line d-none d-lg-block"></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-step">
+              <div class="process-circle"><i class="fas fa-hard-hat"></i></div>
+              <span class="step-label">Step 03</span>
+              <h5>Installation</h5>
+              <p>
+                Professional installation by our certified engineering team.
+              </p>
+              <div class="process-line d-none d-lg-block"></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+            <div class="process-step">
+              <div class="process-circle"><i class="fas fa-power-off"></i></div>
+              <span class="step-label">Step 04</span>
+              <h5>Activation</h5>
+              <p>System activation and real-time monitoring setup.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">Our Work</span>
+          <h2 class="section-title">Project Showcase</h2>
+        </div>
+        <div class="row g-4">
+          <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up"><div class="project-card"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80" alt="Residential Rooftop Solar"><div class="project-overlay"><div class="project-info"><h5>Residential Rooftop</h5><p>Toronto, ON</p></div></div></div></div> -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=800&q=80"
+                alt="Commercial Warehouse Solar"
+              />
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h5>Commercial Warehouse</h5>
+                  <p>Mississauga, ON</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80"
+                alt="Solar Farm"
+              />
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h5>Solar Farm</h5>
+                  <p>Hamilton, ON</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+                alt="Team Installation"
+              />
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h5>Team Installation</h5>
+                  <p>Brampton, ON</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80"
+                alt="Battery Storage"
+              />
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h5>Battery Storage</h5>
+                  <p>Oakville, ON</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80"
+                alt="Urban Solar"
+              />
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h5>Urban Solar</h5>
+                  <p>Toronto, ON</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">Testimonials</span>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="quote">
+                "Profexo transformed our home with solar panels. Our energy
+                bills dropped by 75% within the first month. The installation
+                team was professional and efficient."
+              </p>
+              <p class="author">Sarah Mitchell</p>
+              <p class="role">Homeowner, Toronto</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="quote">
+                "We installed a commercial solar system across our warehouse.
+                The ROI exceeded our expectations. Highly recommend Profexo
+                Solar for any business."
+              </p>
+              <p class="author">David Chen</p>
+              <p class="role">Business Owner, Mississauga</p>
+            </div>
+
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="quote">
+                "From consultation to activation, the experience was seamless.
+                The team explained everything clearly and the system works
+                flawlessly. Best investment we've made."
+              </p>
+              <p class="author">Emily Rodriguez</p>
+              <p class="role">Homeowner, Brampton</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container content" data-aos="fade-up">
+        <span class="section-label">Go Solar Today</span>
+        <h2 class="mt-3">Start Saving with Solar Today</h2>
+        <p>
+          Join hundreds of homeowners and businesses who have already made the
+          switch to clean, renewable solar energy.
+        </p>
+        <a href="#contact" class="btn btn-solar btn-lg">Get Your Free Quote</a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="contact-info-card">
+              <h3>Let's Talk Solar</h3>
+              <p class="subtitle">
+                Ready to make the switch? Get in touch for a free consultation.
+              </p>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h6>Phone</h6>
+                  <p>905-667-7889</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h6>Email</h6>
+                  <p>info@profexosolar.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h6>Address</h6>
+                  <p>34 Minowan Miikan Lane, Toronto, M6J 0G3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="contact-form-card">
+              <h4 class="mb-4" style="font-weight: 700">Send Us a Message</h4>
+              <!-- <form id="contactForm" action="https://formspree.io/f/xojpdbln" method="POST">
+              <div class="row g-3">
+                <div class="col-md-6"><input type="text" class="form-control" placeholder="Your Name" required></div>
+                <div class="col-md-6"><input type="email" class="form-control" placeholder="Your Email" required></div>
+                <div class="col-12"><input type="text" class="form-control" placeholder="Subject"></div>
+                <div class="col-12"><textarea class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
+                <div class="col-12"><button type="submit" class="btn btn-solar btn-lg w-100">Send Message</button></div>
+              </div>
+            </form> -->
+            <form  action="https://formspree.io/f/xojpdbln" method="POST">
+  <div class="row g-3">
+
+    <div class="col-md-6">
+      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+
+    <div class="col-md-6">
+      <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+    </div>
+
+    <div class="col-12">
+      <input type="text" name="subject" class="form-control" placeholder="Subject">
+    </div>
+
+    <div class="col-12">
+      <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-solar btn-lg w-100">Send Message</button>
+    </div>
+
+  </div>
+</form>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <i class="fas fa-sun fa-lg" style="color: var(--solar-gold)"></i
+              ><span class="navbar-brand-text">PROFEXO <span>SOLAR</span></span>
+            </div>
+            <p style="font-size: 0.95rem">
+              Leading provider of premium solar energy solutions for residential
+              and commercial properties across the Greater Toronto Area.
+            </p>
+            <div>
+              <a
+                href="https://www.facebook.com/share/14aZ6VeDZTH/"
+                class="social-link"
+                ><i class="fab fa-facebook-f"></i></a
+              ><a href="#" class="social-link"><i class="fab fa-twitter"></i></a
+              ><a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i></a
+              ><a href="#" class="social-link"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled" style="font-size: 0.9rem">
+              <li class="mb-2"><a href="#services">Services</a></li>
+              <li class="mb-2"><a href="#why-us">Why Us</a></li>
+              <li class="mb-2"><a href="#process">Process</a></li>
+              <li class="mb-2"><a href="#projects">Projects</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h5>Services</h5>
+            <ul class="list-unstyled" style="font-size: 0.9rem">
+              <li class="mb-2"><a href="#">Residential Solar</a></li>
+              <li class="mb-2"><a href="#">Commercial Solar</a></li>
+              <li class="mb-2"><a href="#">Installation</a></li>
+              <li class="mb-2"><a href="#">Battery Storage</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5>Contact Info</h5>
+            <ul class="list-unstyled" style="font-size: 0.9rem">
+              <li class="mb-2">
+                <i
+                  class="fas fa-map-marker-alt me-2"
+                  style="color: var(--solar-gold)"
+                ></i
+                >34 Minowan Miikan Lane, Toronto, M6J 0G3
+              </li>
+              <li class="mb-2">
+                <i
+                  class="fas fa-phone me-2"
+                  style="color: var(--solar-gold)"
+                ></i
+                >905-667-7889
+              </li>
+              <li class="mb-2">
+                <i
+                  class="fas fa-envelope me-2"
+                  style="color: var(--solar-gold)"
+                ></i
+                >info@profexosolar.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
+          <p class="mb-0" style="font-size: 0.85rem">
+            &copy; 2025 Profexo Solar Systems. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+      window.addEventListener("scroll", function () {
+        document
+          .getElementById("mainNav")
+          .classList.toggle("scrolled", window.scrollY > 50);
+      });
+      document.querySelectorAll(".nav-link").forEach((l) =>
+        l.addEventListener("click", () => {
+          const c = document.getElementById("navMenu"),
+            b = bootstrap.Collapse.getInstance(c);
+          if (b) b.hide();
+        }),
+      );
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for your message! We will get back to you shortly.");
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
